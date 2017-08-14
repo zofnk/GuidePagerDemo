@@ -1,4 +1,4 @@
-##Pm需求:单张背景图做平移,至图片的最左移动至最右边,ImageView本身没有什么变化,类似Android的桌面单张长图的模式。
+## Pm需求:单张背景图做平移,至图片的最左移动至最右边,ImageView本身没有什么变化,类似Android的桌面单张长图的模式。
 想法:
 * 需要达成需求,等比缩放后图的宽度一定要大于屏幕宽度,否则就没有效果
 * 画一个保存图片区域的矩形 , 再利用矩阵对矩形的Translate进行变换
@@ -7,7 +7,7 @@
 //应该用如下方法才是创建Matrix对象
 Matrix matrix = new Matrix ( mImage.getImageMatrix () );
 
-###一、先将XML中的ImageView的scaleType设置成matrix
+### 一、先将XML中的ImageView的scaleType设置成matrix
 
     使用RectF画出需要存放图片的矩形区域
     // 存放图片区域的矩形
@@ -36,7 +36,7 @@ Matrix matrix = new Matrix ( mImage.getImageMatrix () );
 注意:
 * postTranslate是指在setScale后平移(preTranslate是在setScale前),他们参数是平移的距离,而不是平移目的地的坐标。
 
-###二、设置位移动画
+### 二、设置位移动画
 位移动画的移动距离为图片对当前屏幕缩放后的真实宽度减去屏幕(或者当前场景下ImageView宽度)
 
     setTranslateAnimation(imgBg, -(dw * value - screenWidth), 0);
@@ -63,7 +63,7 @@ Matrix matrix = new Matrix ( mImage.getImageMatrix () );
     }
 
 
-###三、设置好初始状态的矩阵和最终状态的矩阵及变换动画
+### 三、设置好初始状态的矩阵和最终状态的矩阵及变换动画
 
     class TransXAnimatorListener implements ValueAnimator.AnimatorUpdateListener {
 
@@ -100,7 +100,7 @@ Matrix matrix = new Matrix ( mImage.getImageMatrix () );
 此处onAnimationUpdate方法内矩阵变换参考:
 [[篱开罗 - 自定义可旋转、平移、缩放的ImageView](http://www.jianshu.com/u/619e9a597a07)](http://www.jianshu.com/p/938ca88fb16a) 中的 [动画技巧]
 
-###四、后续优化
+### 四、后续优化
 测试过程中放一些分辨率高的图片的时候发现出现卡顿,使用bitmap压缩的话在压缩过程中会出现短时间的空白屏
 * 这里使用[Fresco](https://github.com/facebook/fresco)的SimpleDraweeView进行替换当前的ImageView
 * 添加Viewpager和Indicator效果,完成需求
