@@ -98,7 +98,7 @@ Matrix matrix = new Matrix ( mImage.getImageMatrix () );
     }
 
 此处onAnimationUpdate方法内矩阵变换参考:
-[[篱开罗 - 自定义可旋转、平移、缩放的ImageView](http://www.jianshu.com/u/619e9a597a07)](http://www.jianshu.com/p/938ca88fb16a) 中的 [动画技巧]
+[篱开罗 - 自定义可旋转、平移、缩放的ImageView](http://www.jianshu.com/p/938ca88fb16a) 中的 [动画技巧]
 
 ### 四、后续优化
 测试过程中放一些分辨率高的图片的时候发现出现卡顿,使用bitmap压缩的话在压缩过程中会出现短时间的空白屏
