@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:fresco="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/white"
+             android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imgBg2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="matrix"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@mipmap/ic_welcome_02"/>
+
+        <View
+            android:background="@color/translucent_50"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/width_or_height_90"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text="@string/guide_2_title"
+            android:layout_marginLeft="@dimen/width_or_height_10"
+            android:layout_marginStart="@dimen/width_or_height_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_37"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/width_or_height_14"
+            android:layout_marginLeft="@dimen/width_or_height_30"
+            android:layout_marginStart="@dimen/width_or_height_30"
+            android:gravity="start|center"
+            android:text="@string/guide_2_subtitle"
+            android:textColor="@color/white"
+            android:alpha="0.9"
+            android:textSize="@dimen/textsize_18"/>
+
+    </LinearLayout>
+
+</FrameLayout>

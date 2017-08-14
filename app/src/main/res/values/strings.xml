@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GuidePagerDemo</string>
+
+    <!-- 启动页 -->
+    <string name="guide_1_title">「 专注 」</string>
+    <string name="guide_1_subtitle">匠心之作，将灵感与你分享</string>
+    <string name="guide_2_title">「 规范 」</string>
+    <string name="guide_2_subtitle">严控核心工艺，优质与健康带回家</string>
+    <string name="guide_3_title">「 省心 」</string>
+    <string name="guide_3_subtitle">掌握精确进度，随时随地看装修</string>
+    <string name="guide_4_title">「 保障 」</string>
+    <string name="guide_4_subtitle">携手太平洋保险，让装修更放心</string>
+    <string name="guide_5_title">欢迎使用</string>
+    <string name="guide_5_subtitle">开启你的美家之旅</string>
+</resources>
